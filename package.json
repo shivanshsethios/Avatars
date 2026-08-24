@@ -1,0 +1,24 @@
+{
+  "name": "avatars-monorepo",
+  "version": "0.0.1",
+  "description": "Gravatar-like avatar service for ShivansOS",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "worker"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "dev": "npm run dev --workspaces",
+    "test": "npm run test --workspaces",
+    "lint": "eslint . --ext .ts,.tsx"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^0.34.0"
+  }
+}

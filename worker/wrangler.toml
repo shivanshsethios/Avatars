@@ -1,0 +1,35 @@
+name = "avatar-worker"
+main = "src/index.ts"
+compatibility_date = "2023-12-01"
+
+[[routes]]
+pattern = "avatar.shivanshsethi.in/*"
+zone_name = "shivanshsethi.in"
+
+[env.production]
+route = "avatar.shivanshsethi.in/*"
+zone_id = "" # TODO: Set zone ID
+
+[build]
+command = "npm install && npm run build --workspace=packages/avatar"
+cwd = ".."
+
+[build.upload]
+main = "../packages/avatar/dist/index.js"
+
+# D1 Database
+[[d1_databases]]
+binding = "DB"
+database_name = "avatars"
+database_id = "" # TODO: Set after creating D1 database
+
+# R2 Bucket
+[[r2_buckets]]
+bucket_name = "avatars"
+binding = "AVATARS"
+
+# KV Namespace
+[[kv_namespaces]]
+binding = "KV"
+id = "" # TODO: Set after creating KV namespace
+preview_id = "" # TODO: Set after creating preview KV namespace

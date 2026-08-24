@@ -1,0 +1,15 @@
+{
+  "name": "avatar-worker",
+  "version": "0.0.1",
+  "description": "Cloudflare Worker for avatar service",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "build": "wrangler build"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230821.0",
+    "wrangler": "^3.0.0"
+  }
+}
