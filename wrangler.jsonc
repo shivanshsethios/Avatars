@@ -1,5 +1,5 @@
 {
   "name": "avatars",
   "compatibility_date": "2026-08-29",
-  "main": "src/index.ts"
+  "main": "worker/src/index.ts"
 }
